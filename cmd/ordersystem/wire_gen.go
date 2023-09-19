@@ -23,7 +23,8 @@ import (
 
 // Injectors from wire.go:
 
-func NewListOrdersUseCase(db *sql.DB, orderRepository entity.OrderRepositoryInterface) *usecase.ListOrdersUseCase {
+func NewListOrdersUseCase(db *sql.DB, eventDispatcher events.EventDispatcherInterface) *usecase.ListOrdersUseCase {
+	orderRepository := database.NewOrderRepository(db)
 	listOrdersUseCase := usecase.NewListOrdersUseCase(orderRepository)
 	return listOrdersUseCase
 }

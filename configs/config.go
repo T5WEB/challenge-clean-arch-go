@@ -12,6 +12,10 @@ type conf struct {
 	WebServerPort     string `mapstructure:"WEB_SERVER_PORT"`
 	GRPCServerPort    string `mapstructure:"GRPC_SERVER_PORT"`
 	GraphQLServerPort string `mapstructure:"GRAPHQL_SERVER_PORT"`
+	RBMQUser          string `mapstructure:"RABBITMQ_USER"`
+	RBMQPass          string `mapstructure:"RABBITMQ_PASSWORD"`
+	RBMQHost          string `mapstructure:"RABBITMQ_HOST"`
+	RBMQPort          string `mapstructure:"RABBITMQ_PORT"`
 }
 
 func LoadConfig(path string) (*conf, error) {

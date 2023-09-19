@@ -1,5 +1,7 @@
 # challenge-clean-arch-go
 
+Fazer a listagem das orders com endpoint rest, query graphQL [x], endpoint gRPC.
+
 ## Commands
 
 #### To up containers docker
@@ -13,6 +15,10 @@
 #### To execute MySQL
 
 ### docker compose exec mysql bash
+
+#### To generate folder pb of protocol buffer and grpc
+
+### protoc --go_out=. --go-grpc_out=. protofiles/order.proto
 
 #### To access the client EVANS of the gRPC
 
