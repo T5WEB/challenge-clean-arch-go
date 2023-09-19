@@ -1,38 +1,40 @@
 # challenge-clean-arch-go
 
-Fazer a listagem das orders com endpoint rest, query graphQL [x], endpoint gRPC.
+Fazer a listagem das orders com endpoint rest[x], query graphQL [x], endpoint gRPC[x].
 
 ## Commands
 
-#### To up containers docker
+### To up containers docker
 
-### docker compose up -d
+##### docker compose up -d
 
-##### To run all services
+### To run all services
 
-### go run main.go wire_gen.go
+##### go run main.go wire_gen.go
 
-#### To execute MySQL
+### To execute MySQL
 
-### docker compose exec mysql bash
+##### docker compose exec mysql bash
 
-#### To generate folder pb of protocol buffer and grpc
+##### after execute: mysql -p user root pass root
 
-### protoc --go_out=. --go-grpc_out=. protofiles/order.proto
+### To generate folder pb of protocol buffer and grpc
 
-#### To access the client EVANS of the gRPC
+##### protoc --go_out=. --go-grpc_out=. internal/infra/grpc/protofiles/order.proto
 
-### evans -r repl
+### To access the client EVANS of the gRPC
+
+##### evans -r repl
 
     - Type: package pb
     - Type: service order_service
-    - Type: call CreateOrder
+    - Type: call CreateOrder or ListOrders
 
 Filling inputs of according
 
-#### To acces RabbitMQ
+### To acces RabbitMQ
 
-### To access localhost:15672
+##### To access localhost:15672
 
 admin: guest
 pass: guest
