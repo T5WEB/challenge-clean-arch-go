@@ -4,9 +4,21 @@ Fazer a listagem das orders com endpoint rest[x], query graphQL [x], endpoint gR
 
 ## Commands
 
-### To up containers docker
+### To up or down containers docker
 
-##### docker compose up -d
+##### make init
+
+##### make down
+
+### To up or stop containers docker again
+
+##### make start
+
+##### make stop
+
+### To create or to erase migrations
+
+##### make migrate or make migratedown
 
 ### To run all services
 
@@ -16,7 +28,7 @@ Fazer a listagem das orders com endpoint rest[x], query graphQL [x], endpoint gR
 
 ##### docker compose exec mysql bash
 
-##### after execute: mysql -p user root pass root
+##### after execute: mysql -p
 
 ### To generate folder pb of protocol buffer and grpc
 
